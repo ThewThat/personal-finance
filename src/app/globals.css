@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --dca-bg: #f8fafc;
+  --dca-panel: #ffffff;
+  --dca-card: #f1f5f9;
+  --dca-border: #e2e8f0;
+  --dca-cyan: #0ea5e9;
+  --dca-green: #10b981;
+  --dca-red: #ef4444;
+  --dca-amber: #f59e0b;
+  --dca-purple: #8b5cf6;
+  --dca-text: #0f172a;
+  --dca-muted: #64748b;
+  --dca-dim: #94a3b8;
+}
+
+.dark {
+  --background: #020817;
+  --foreground: #e2e8f0;
+  --dca-bg: #020817;
+  --dca-panel: #0a1628;
+  --dca-card: #0f1e35;
+  --dca-border: #1a3050;
+  --dca-cyan: #00d4ff;
+  --dca-green: #10b981;
+  --dca-red: #ef4444;
+  --dca-amber: #f59e0b;
+  --dca-purple: #7c3aed;
+  --dca-text: #e2e8f0;
+  --dca-muted: #64748b;
+  --dca-dim: #334155;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* DCA Tracker Design Tokens */
+  --color-dca-bg: var(--dca-bg);
+  --color-dca-panel: var(--dca-panel);
+  --color-dca-card: var(--dca-card);
+  --color-dca-border: var(--dca-border);
+  --color-dca-cyan: var(--dca-cyan);
+  --color-dca-green: var(--dca-green);
+  --color-dca-red: var(--dca-red);
+  --color-dca-amber: var(--dca-amber);
+  --color-dca-purple: var(--dca-purple);
+  --color-dca-text: var(--dca-text);
+  --color-dca-muted: var(--dca-muted);
+  --color-dca-dim: var(--dca-dim);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Geist Mono", ui-monospace, monospace;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-dca-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-dca-border);
+  border-radius: 2px;
+}
+
+* {
+  box-sizing: border-box;
+}
